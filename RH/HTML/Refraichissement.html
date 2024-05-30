@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/ges-dem.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../CSS/RH.css">
+    <link rel="stylesheet" href="../../css/side-index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="../../index.html"><div class="sidebar-logo"><img src="../../prophex.png" alt="Logo"></div></a>
+        <div class="sidebar-menus">
+            <a href="../../index.html" class="Demandes"><ion-icon name="document-text-outline"></ion-icon>Demandes</a>
+            <a href="../../Evaluation/HTML/evaluations.html" class="Évaluations"><ion-icon name="star-outline"></ion-icon>Évaluations</a>
+            <a href="../../Mes Demandes/HTML/mes-demandes.html" class="Mes-Demandes"><ion-icon name="reader-outline"></ion-icon>Mes Demandes</a>
+            <a href="../../Liste-Demandes/HTML/liste.html" class="Approval"><ion-icon name="clipboard-outline"></ion-icon>Approval</a>
+            <a href="../../Compte/HTML/compte.html" class="compte"><ion-icon name="person-circle-outline"></ion-icon>compte</a>
+            <a href="../../Favorites/HTML/favorites.html" class="Favorites"><ion-icon name="bookmark-outline"></ion-icon>Favorites</a>
+            <a href="../../Setting/HTML/setting.html" class="s"><ion-icon class="Setting" name="settings-outline"></ion-icon>Setting</a>
+        </div>
+        <div class="sidebar-logout">
+            <a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+    </div>
+    <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+    <div class="main">
+        <div class="main-navbar">
+            <div class="home">
+                <a href="../../index.html" class="ho"><ion-icon name="home-outline"></ion-icon></a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Quelle demande recherchez-vous ?">
+                <button class="search-btn">Search</button>
+                <button class="search-icon"><ion-icon name="search"></ion-icon></button>
+            </div>
+            <div class="profile">
+                <a href="#" class="user"><ion-icon name="person-outline"></ion-icon></a>
+            </div>
+        </div>
+        <div class="main-highlight">
+            <div class="main-header">
+                <h2 class="main-title">Recommendation</h2>
+                <div class="main-arrow">
+                    <ion-icon class="back" name="chevron-back-circle-outline"></ion-icon>
+                    <ion-icon class="next" name="chevron-forward-circle-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="highlight-wrapper">
+                <div class="highlight-card">
+                    <img src="../../images/Vihecule.jpg" alt="Vihecule image" class="highlight-img">
+                    <div class="highlight-desc">
+                        <h4>Demande Vihecule</h4>
+                        <p>MG</p>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img src="../../images/Ordre-de-mession.jpg" alt="Ordre de mission image" class="highlight-img">
+                        <div class="highlight-desc">
+                            <h4>Ordre De Mession</h4>
+                            <p>RH</p>
+                        </div>
+                </div>
+                <div class="highlight-card">
+                    <img src="../../images/Documents.jpg" alt="Documents image" class="highlight-img">
+                    <div class="highlight-desc">
+                        <h4>Demande Des Document</h4>
+                        <p>RH</p>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img src="../../images/Formation.jpg" alt="Formation image" class="highlight-img">
+                    <div class="highlight-desc">
+                        <h4>Demande De Formation</h4>
+                        <p>Marketing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menus">
+            <div class="main-filter">
+                <div class="catg">
+                    <h2 class="main-title">Departemnts <br>Menu</h2>
+                    <div class="main-arrow">
+                        <ion-icon class="back-menus" name="chevron-back-circle-outline"></ion-icon>
+                        <ion-icon class="next-menus" name="chevron-forward-circle-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="filter-wrapper">
+                    <div class="filter-card" id="RH">
+                        <div class="filter-icon">
+                            <ion-icon name="document-text-outline"></ion-icon>
+                        </div>
+                        <p>RH</p>
+                    </div>
+                    <div class="filter-card" id="MG">
+                        <div class="filter-icon">
+                            <ion-icon name="construct-outline"></ion-icon>
+                        </div>
+                        <p>MG</p>
+                    </div>
+                    <div class="filter-card"id="MK">
+                        <div class="filter-icon">
+                            <ion-icon name="megaphone-outline"></ion-icon>
+                        </div>
+                        <p>Marketing</p>
+                    </div>
+                    <div class="filter-card" id="FC">
+                        <div class="filter-icon">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </div>
+                        <p>FC</p>
+                    </div>
+                    <div class="filter-card" id="CM">
+                        <div class="filter-icon">
+                            <ion-icon name="bag-handle-outline"></ion-icon>
+                        </div>
+                        <p>Comerciale</p>
+                    </div>
+                    <div class="filter-card" id="AC">
+                        <div class="filter-icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </div>
+                        <p>Achats</p>
+                    </div>
+                    <div class="filter-card" id="IT">
+                        <div class="filter-icon">
+                            <ion-icon name="code-slash-outline"></ion-icon>
+                        </div>
+                        <p>IT</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="divider">
+            <div class="forms">
+                <h2 class="main-title">Demande Rafraîchissement</h2>
+                <form action="#" method="post">
+                    <div class="case">
+                        <label for="Numero">N°</label>
+                        <input type="text" name="Numero" id="Numero">
+                    </div>
+                    <div class="case">
+                        <label for="employé">Employé</label>
+                        <input type="text" name="employé" id="employé">
+                    </div>
+                    <div class="case">
+                        <label for="dated">Date</label>
+                        <input type="date" name="dated" id="dated">
+                    </div>
+                    <div class="case">
+                        <label for="type">Type de Réunion</label>
+                        <select id="type" name="type">
+                            <option value="" >Selectioner le Type de Réunion</option>
+                            <option value="Réunion Mensuelle">Réunion Mensuelle</option>
+                            <option value="Science de Travaille">Science de Travaille</option>
+                            <option value="Formation">Formation</option>
+                            <option value="Réunion Trimestrielle">Réunion Trimestrielle</option>
+                        </select>
+                    </div>
+                    <div class="case">
+                        <label for="responsable">Responsable de réunion</label>
+                        <input type="text" name="responsable" id="responsable" placeholder="Ecrire le responsable de la réunion">
+                    </div>
+                    <div class="case">
+                        <label for="nombre">Responsable de réunion</label>
+                        <input type="number" name="nombre" id="nombre" placeholder="Ecrire le nombre de personne Concerné la réunion" min="2">
+                    </div>
+                    <div class="submit">
+                        <input type="reset" value="Annuler" class="annuler">
+                        <input type="submit" value="Submit" class="envoyer">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery=2.2.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../../JavaScript/filter-card.js"></script>
+<script src="../../JavaScript/sidebar.js"></script>
+<script src="../../JavaScript/steps.js"></script>
+<script src="../../JavaScript/textarea.js"></script>
+<script src="../JavaScript/RH.js"></script>
+<script src="../../Setting/JavaScripte/setting.js"></script>
+</html>

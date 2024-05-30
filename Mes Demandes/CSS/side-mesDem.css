@@ -1,0 +1,25 @@
+.Évaluations,
+.Mes-Demandes,
+.Approval,
+.Demandes,
+.compte,
+.Favorites,
+.s,
+.sidebar-logout a {
+    padding: 5% 8%;
+    margin: 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--whiteColor);
+    background-color: transparent;
+    transition: transform 0.3s;
+    width: 190px;
+}
+
+.Mes-Demandes {
+    background-color: var(--secondaryColor);
+    border-radius: 20px;
+}

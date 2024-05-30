@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/ges-dem.css">
+    <link rel="stylesheet" href="../../css/sort-filter.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../CSS/setting.css">
+    <link rel="stylesheet" href="../CSS/side-settings.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="../../index.html">
+            <div class="sidebar-logo"><img src="../../prophex.png" alt="Logo"></div>
+        </a>
+        <div class="sidebar-menus">
+            <a href="../../index.html" class="Demandes"><ion-icon name="document-text-outline"></ion-icon>Demandes</a>
+            <a href="../../Evaluation/HTML/evaluations.html" class="Évaluations"><ion-icon
+                    name="star-outline"></ion-icon>Évaluations</a>
+            <a href="../../Mes Demandes/HTML/mes-demandes.html" class="Mes-Demandes"><ion-icon
+                    name="reader-outline"></ion-icon>Mes Demandes</a>
+            <a href="../../Liste-Demandes/HTML/liste.html" class="Approval"><ion-icon
+                    name="clipboard-outline"></ion-icon>Approval</a>
+            <a href="../../Compte/HTML/compte.html" class="compte"><ion-icon
+                    name="person-circle-outline"></ion-icon>compte</a>
+            <a href="../../Favorites/HTML/favorites.html" class="Favorites"><ion-icon
+                    name="bookmark-outline"></ion-icon>Favorites</a>
+            <a href="../../Setting/HTML/setting.html" class="s"><ion-icon class="Setting"
+                    name="settings-outline"></ion-icon>Setting</a>
+        </div>
+        <div class="sidebar-logout">
+            <a href="#"><ion-icon name="log-out-outline"></ion-icon>Logout</a>
+        </div>
+    </div>
+    <ion-icon class="menu-toggle" name="menu-outline"></ion-icon>
+    <div class="main">
+        <div class="main-navbar">
+            <div class="home">
+                <a href="../../index.html" class="ho"><ion-icon name="home-outline"></ion-icon></a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Quelle demande recherchez-vous ?">
+                <button class="search-btn">Search</button>
+                <button class="search-icon"><ion-icon name="search"></ion-icon></button>
+            </div>
+            <div class="profile">
+                <a href="#" class="user"><ion-icon name="person-outline"></ion-icon></a>
+            </div>
+        </div>
+        <div class="settings">
+            <div class="theme">
+                <div class="label">Choose your theme color</div>
+                <div class="switch-color">
+                    <div class="colors">
+                        <input type="radio" id="first" name="color" value="mode1" >
+                        <label for="first" class="theme-colors" onclick="changeTheme('#0e4a62', '#fc8454')">
+                            <div class="primary firstp"></div>
+                            <div class="secondary firsts"></div>
+                        </label>
+                    </div>
+                    <div class="colors">
+                        <input type="radio" id="second" name="color" value="mode2">
+                        <label for="second" class="theme-colors" onclick="changeTheme('#6c5ce7', '#0984e3')">
+                            <div class="primary secondp"></div>
+                            <div class="secondary seconds"></div>
+                        </label>
+                    </div>
+                    <div class="colors">
+                        <input type="radio" id="third" name="color" value="mode3">
+                        <label for="third" class="theme-colors" onclick="changeTheme('#0e6253', '#ffc107')">
+                            <div class="primary thirdp"></div>
+                            <div class="secondary thirds"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="theme">
+                <div class="label">Choose Langage</div>
+                <div class="switch-lang">
+                    <div class="langage">
+                        <input type="radio" id="francais" name="langage" value="english" checked>
+                        <label for="francais" class="my-lang">
+                            Français
+                        </label>
+                    </div>
+                    <div class="langage">
+                        <input type="radio" id="english" name="langage" value="english" >
+                        <label for="english" class="my-lang">
+                            English
+                        </label>
+                    </div>
+                    <div class="langage">
+                        <input type="radio" id="arab" name="langage" value="english" >
+                        <label for="arab" class="my-lang">
+                            Arab
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="administrateur">
+                <nav>
+                    <ul>
+                        <li class="active" onclick="toggleUnderline(this)">Liste des Employees</li>
+                        <li onclick="toggleUnderline(this)">Accès Validateur</li>
+                        <li onclick="toggleUnderline(this)">Accès Responsable</li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="admiZone">
+                <table id="myTable" class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">username</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prénom</th>
+                            <th scope="col">Département</th>
+                            <th scope="col">Poste</th>
+                            <th scope="col">Succursal</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone Number</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Edite</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0001</td>
+                            <td>Amine-Daddi</td>
+                            <td>Amine</td>
+                            <td>Daddi</td>
+                            <td>IT</td>
+                            <td>Stagiaire</td>
+                            <td>Prophex</td>
+                            <td>aminedaddi66@gmail.com</td>
+                            <td>0664486608</td>
+                            <td>*********</td>
+                            <td><button type="button" class="btn btn-success">Modifier</button></td>
+                        </tr>
+                        <tr>
+                            <td>0002</td>
+                            <td>Amine-Daddi</td>
+                            <td>Amine</td>
+                            <td>Daddi</td>
+                            <td>IT</td>
+                            <td>Stagiaire</td>
+                            <td>Prophex</td>
+                            <td>aminedaddi66@gmail.com</td>
+                            <td>0664486608</td>
+                            <td>*********</td>
+                            <td><button type="button" class="btn btn-success">Modifier</button></td>
+                        </tr>
+                        <tr>
+                            <td>0003</td>
+                            <td>Amine-Daddi</td>
+                            <td>Amine</td>
+                            <td>Daddi</td>
+                            <td>IT</td>
+                            <td>Stagiaire</td>
+                            <td>Prophex</td>
+                            <td>aminedaddi66@gmail.com</td>
+                            <td>0664486608</td>
+                            <td>*********</td>
+                            <td><button type="button" class="btn btn-success">Modifier</button></td>
+                        </tr>
+                        <tr>
+                            <td>0004</td>
+                            <td>Amine-Daddi</td>
+                            <td>Amine</td>
+                            <td>Daddi</td>
+                            <td>IT</td>
+                            <td>Stagiaire</td>
+                            <td>Prophex</td>
+                            <td>aminedaddi66@gmail.com</td>
+                            <td>0664486608</td>
+                            <td>*********</td>
+                            <td><button type="button" class="btn btn-success">Modifier</button></td>
+                        </tr>
+                        <tr>
+                            <td>0004</td>
+                            <td>Amine-Daddi</td>
+                            <td>Amine</td>
+                            <td>Daddi</td>
+                            <td>IT</td>
+                            <td>Stagiaire</td>
+                            <td>Prophex</td>
+                            <td>aminedaddi66@gmail.com</td>
+                            <td>0664486608</td>
+                            <td>*********</td>
+                            <td><button type="button" class="btn btn-success">Modifier</button></td>
+                        </tr>
+                        <tr>
+                            <td>0006</td>
+                            <td>Amine-Daddi</td>
+                            <td>Amine</td>
+                            <td>Daddi</td>
+                            <td>IT</td>
+                            <td>Stagiaire</td>
+                            <td>Prophex</td>
+                            <td>aminedaddi66@gmail.com</td>
+                            <td>0664486608</td>
+                            <td>*********</td>
+                            <td><button type="button" class="btn btn-success">Modifier</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery=2.2.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../../JavaScript/filter-card.js"></script>
+<script src="../../JavaScript/sidebar.js"></script>
+<script src="../../JavaScript/steps.js"></script>
+<script src="../../JavaScript/textarea.js"></script>
+<script src="../JavaScripte/setting.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script>
+    $( document ).ready( function ()
+    {
+        $( '#myTable' ).DataTable();
+    } );
+</script>
+
+</html>
+
+
+

@@ -1,0 +1,46 @@
+.dataTables_filter,
+.dataTables_length {
+    display: flex;
+    margin: 5px 0px;
+    width: 300px;
+    color: white;
+
+}
+
+.dataTables_filter input {
+    width: 300px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.dataTables_paginate .paginate_button {
+    padding: 5px 10px;
+    margin: 0 2px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 14px;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background-color: #007bff;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.dataTables_length select {
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 14px;
+}
+.dataTables_length label {
+    width: 195px;
+    display: flex;
+    justify-content: space-between;
+}

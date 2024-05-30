@@ -1,0 +1,123 @@
+#MK,
+#MG,
+#FC,
+#CM,
+#AC,
+#IT {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 80px;
+    height: 80%;
+    background-color: var(--whiteColor);
+    color: var(--balckColor);
+    border-radius: 8px;
+    border: 1px solid var(--softgreenColor);
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0s, background-color 0.3s;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#MK:hover,
+#MG:hover,
+#FC:hover,
+#CM:hover,
+#AC:hover,
+#IT:hover {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    transform: scale(1.05);
+}
+
+#RH {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+.submit .Demande-Vihecule{
+        padding: 10px 20px;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-left: 15px;
+        background-color: var(--primaryColor);
+        display: none;
+}
+
+.retenue{
+    display: none;
+}
+
+.checks {
+    flex: 1;
+    padding: 8px 0px 8px 8px;
+    border: 1px solid #ccc;
+    min-width: 200px;
+    max-width: 250px;
+    color: var(--primaryColor);
+    word-wrap: break-word;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+
+.checks:hover {
+    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.226);
+}
+
+.checkbox-group,
+.checkbox-personne {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.checkbox-group input[type="checkbox"],
+.checkbox-personne input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-group label,
+.checkbox-personne label {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 5px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    cursor: pointer;
+    /* width: 100%; */
+    background-color: var(--softgreenColor);
+    transition: 0.3s;
+}
+
+
+.nombre {
+    display: none;
+}
+
+
+
+.checkbox-group input[type="checkbox"]:checked+label,
+.checkbox-personne input[type="checkbox"]:checked+label {
+    background-color: var(--primaryColor);
+    color: #fff;
+}
+
+.checks ion-icon {
+    font-size: large;
+    transition: none;
+}
+
+
+

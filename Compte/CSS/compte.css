@@ -1,0 +1,243 @@
+*{
+    transition: 0.3s;
+}
+
+
+.main-compte{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.myAccount{
+    margin-top: 30px;
+    width: 80%;
+    max-width: 700px;
+    min-width: 500px;
+    min-height: 70vh;
+    background-color: var(--secondaryColor);
+    border-radius: 15px;
+    border: var(--primaryColor) 1px solid;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 15px;
+    /* display: none; */
+}
+
+.profile-area{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.profile-area h1{
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.profile-area h1:hover{
+    color: black;
+    transform: scale(1.1);
+}
+
+.profile-pic{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: var(--primaryColor) 1px solid;
+    cursor: pointer;
+    background-image: url("../../images/profile-pic.jpg");
+    background-position: 50% 50%;
+    background-size: 170px;
+    transition: 0.5s;
+}
+
+.profile-pic:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgb(104, 104, 104);
+    border-radius: 15px;
+}
+
+.info-liste{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.zone{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 50px;
+        border-radius: 15px;
+        width: 100%;
+        min-width: 200px;
+        max-width: 600px;
+}
+
+.zone label{
+    font-weight: 600;
+    width: 30%;
+}
+
+.info{
+    height: 50px;
+    border-radius: 15px;
+    border: var(--primaryColor) 1px solid;
+    width: 60%;
+    background-color: #fbfdee;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.info:hover{
+    background-color: rgb(240, 240, 240);
+    transform: scale(1.1);
+}
+.b {
+    display: flex;
+    margin-bottom: 15px;
+    height: 120px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.switch {
+    flex: 1;
+    width: 160px;
+    height: 100%;
+    color: var(--primaryColor);
+    word-wrap: break-word;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.info-mode {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.info-mode:hover {
+    transform: scale(1.1);
+}
+
+.info-mode input[type="radio"] {
+    display: none;
+}
+
+.info-mode label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 5px;
+    border: 2px solid #342f53;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    background-color: var(--whiteColor);
+    transition: 0.3s;
+}
+
+.info-mode input[type="radio"]:checked+label {
+    background-color: var(--primaryColor);
+    color: #fff;
+    border: 2px solid black;
+
+}
+
+.table-container {
+    min-width: 500px;
+    width: 100%;
+    overflow-x: auto;
+    border: rgb(211, 211, 211) 1px solid;
+    border-radius: 5px;
+    margin-top: 30px;
+    height: fit-content;
+    max-height: 400px;
+    display: none;
+}
+
+
+.table {
+    width: 100%;
+    max-width: 100%;
+}
+
+.table thead th {
+    white-space: nowrap;
+}
+
+.open-mode{
+    display: block;
+}
+
+.close-mode{
+    display: none;
+}
+
+.profile-zoom {
+    width: 120px;
+    height: 120px;
+    background: url('../../images/profile-pic.jpg');
+    position: fixed;
+    cursor: pointer;
+    background-image: url("../../images/profile-pic.jpg");
+    background-position: 50% 50%;
+    background-size: 170px;
+    left: calc(50% - 60px);
+    top: calc(50% - 60px);
+    transform: translate(1000px) ;
+    border-radius: 5px;
+    border: 1px gray solid;
+    z-index: 10;
+    transition: 1s;
+}
+
+.close{
+    position: absolute;
+
+    background-color: red;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    right: -5px;
+    top: -5px;
+}
+
+.picture-zoom{
+    transform: translate(0px) scale(3.5);
+}
+.filter{
+    filter: blur(10px);
+    pointer-events: none;
+}
+

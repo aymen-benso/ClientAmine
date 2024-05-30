@@ -1,0 +1,149 @@
+/* Custom dropdown style */
+.custom-dropdown select {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 200px;
+    /* Adjust width as needed */
+}
+
+/* Style dropdown options */
+.custom-dropdown select option {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Style on focus */
+.custom-dropdown select:focus {
+    outline: none;
+    border-color: var(--primaryColor);
+}
+
+.filter-card:hover {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    transform: scale(1.05);
+}
+
+.filter-card:hover .filter-icon {
+    background-color: var(--whiteColor);
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.forms form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    min-width: 460px;
+    width: 70%;
+}
+
+.case {
+    display: flex;
+    margin-bottom: 15px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.case label {
+    width: 200px;
+    margin-right: 15px;
+    color: var(--primaryColor);
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.case input,
+.case select,
+.case textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    min-width: 200px;
+    max-width: 250px;
+    color: var(--primaryColor);
+    border-radius: 15px;
+}
+
+.case input:hover,
+.case select:hover,
+.case textarea:hover {
+    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.226);
+}
+
+.case input:focus,
+.case select:focus,
+.case textarea:focus {
+    border: var(--primaryColor) 1px solid;
+}
+
+.demande {
+    min-height: 100px;
+}
+
+.submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.submit .envoyer,
+.submit .annuler {
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+}
+
+.envoyer {
+    background-color: var(--secondaryColor);
+}
+
+.annuler {
+    background-color: rgb(252, 101, 101);
+}
+
+.submit .envoyer:hover {
+    background-color: var(--primaryColor);
+    transform: scale(1.05);
+
+}
+
+.submit .annuler:hover {
+    background-color: red;
+    transform: scale(1.05);
+
+}
+
+textarea::-webkit-scrollbar{
+    width: 0px;
+}
+
+@media screen and (max-width:800px) {
+    .forms form{
+        width: 90%;
+    }
+}

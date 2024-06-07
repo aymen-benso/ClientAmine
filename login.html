@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Prophex</title>
 </head>
-
-
 <body>
     <div class="wrapper">
         <div class="logo"><img src="prophex.png" alt="logo"></div>
-        <form action="login-verify.php" method="POST">
+        <form id="login-form">
             <h1>Login</h1>
             <div class="input-box">
-                <input type="text" name="username" placeholder="Username" required>
+                <input type="text" name="email" placeholder="Email" required>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
@@ -29,7 +25,46 @@
                 <button type="submit" class="btn">Login</button>
             </div>
         </form>
-
     </div>
+    <script>
+        const API_URL = 'http://127.0.0.1:8000';
+
+        document.getElementById('login-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const loginData = {
+                username: formData.get('email'),  // Use formData.get('email') for email
+                password: formData.get('password')
+            };
+
+            const response = await fetch(`${API_URL}/signin`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: new URLSearchParams(loginData)
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                alert('Login successful');
+                document.cookie = `user=${encodeURIComponent(JSON.stringify(data))}; path=/;`;
+                window.location.href = 'index.html';
+            } else {
+                const errorData = await response.json();
+                alert(`Error: ${errorData.detail}`);
+            }
+        });
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        function deleteCookie(name) {
+            document.cookie = `${name}=; Max-Age=0; path=/;`;
+        }
+    </script>
 </body>
 </html>

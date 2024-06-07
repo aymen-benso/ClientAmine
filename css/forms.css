@@ -72,7 +72,8 @@
 
 .case input,
 .case select,
-.case textarea {
+.case textarea,
+.case p {
     flex: 1;
     padding: 8px;
     border: 1px solid #ccc;

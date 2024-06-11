@@ -90,3 +90,33 @@ def delete_user(user_id: int):
     db.commit()
     db.close()
     return db_user
+
+@app.get("/listeResponsables/", response_model=List[schemas.User])
+def get_responsable(db: Session = Depends(get_db)):
+    responsable = crud.get_responsable(db)
+    return responsable
+
+@app.post("/demande_ordre_mission/", response_model=schemas.DemandeOrdreMission)
+def create_demande_ordre_mission(demande: schemas.DemandeOrdreMissionCreate, db: Session = Depends(get_db)):
+    return crud.create_demande_ordre_mission(db=db, demande=demande)
+
+@app.get("/demande_ordre_mission_pending/", response_model=List[schemas.DemandeOrdreMission])
+def get_demande_ordre_mission(db: Session = Depends(get_db)):
+    return crud.get_demande_ordre_mission(db)
+
+@app.post("/accept_demande_ordre_mission_by_responsable/{demande_id}", response_model=schemas.DemandeOrdreMission)
+def accept_demande_ordre_mission_by_responsable(demande_id: int, db: Session = Depends(get_db)):
+    return crud.accept_demande_ordre_mission_by_responsable(db, demande_id)
+
+@app.get("/demande_ordre_mission_accepted_by_responsable/{responsable_pr_id}", response_model=List[schemas.DemandeOrdreMission])
+def get_demande_ordre_mission_by_responsable(responsable_pr_id: int, db: Session = Depends(get_db)):
+    return crud.get_demande_ordre_mission_by_responsable(db, responsable_pr_id)
+
+@app.post("/accept_demande_ordre_mission_by_RH/{demande_id}", response_model=schemas.DemandeOrdreMission)
+def accept_demande_ordre_mission_by_RH(demande_id: int, db: Session = Depends(get_db)):
+    return crud.accept_demande_ordre_mission_by_RH(db, demande_id)
+
+
+@app.get("/" , response_model=str)
+def home():
+    return "Welcome to the home page"

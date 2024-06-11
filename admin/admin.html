@@ -107,15 +107,107 @@
         </div>
         <div>
             <label for="role">Role:</label>
-            <input type="text" id="role" name="role" required>
+            <select id="role" name="role">
+                <option value="Assistant commercial">Assistant commercial</option>
+                <option value="Acheteur Indirect">Acheteur Indirect</option>
+                <option value="Agent commercial">Agent commercial</option>
+                <option value="Asisstant Facturation">Asisstant Facturation</option>
+                <option value="GESTIONNAIRE RH">GESTIONNAIRE RH</option>
+                <option value="Trésorier">Trésorier</option>
+                <option value="Créateur contenu">Créateur contenu</option>
+                <option value="Agent de stock">Agent de stock</option>
+                <option value="Chef d'équipe">Chef d'équipe</option>
+                <option value="Responsable HSE">Responsable HSE</option>
+                <option value="Attaché marketing">Attaché marketing</option>
+                <option value="Opérateur">Opérateur</option>
+                <option value="Aide opérateur">Aide opérateur</option>
+                <option value="Responsable Marketing de Marque">Responsable Marketing de Marque</option>
+                <option value="Animateur RH">Animateur RH</option>
+                <option value="Responsable de stock">Responsable de stock</option>
+                <option value="Chef de produit">Chef de produit</option>
+                <option value="Responsable Commercial">Responsable Commercial</option>
+                <option value="chauffeur livreur">chauffeur livreur</option>
+                <option value="Agent de sécurité">Agent de sécurité</option>
+                <option value="Délégué commercial">Délégué commercial</option>
+                <option value="Chargé de l'administration du personnel">Chargé de l'administration du personnel</option>
+                <option value="Acheteur interne">Acheteur interne</option>
+                <option value="Chargé des opérations diverses">Chargé des opérations diverses</option>
+                <option value="Directeur finances et comptabilité">Directeur finances et comptabilité</option>
+                <option value="Délégué  commercial">Délégué  commercial</option>
+                <option value="Acheteur">Acheteur</option>
+                <option value="Chef de parc auto">Chef de parc auto</option>
+                <option value="Contrôleur financier">Contrôleur financier</option>
+                <option value="Aide comptable">Aide comptable</option>
+                <option value="Stagiaire">Stagiaire</option>
+                <option value="Assistant Facturation">Assistant Facturation</option>
+                <option value="Chargé du transit">Chargé du transit</option>
+                <option value="Contrôleur de commandes">Contrôleur de commandes</option>
+                <option value="Aide cuisinier">Aide cuisinier</option>
+                <option value="Délégué communication et publicité">Délégué communication et publicité</option>
+                <option value="Responsable management qualité">Responsable management qualité</option>
+                <option value="Responsable systèmes d'information">Responsable systèmes d'information</option>
+                <option value="Directeur moyens généraux">Directeur moyens généraux</option>
+                <option value="Gestionnaire administratif achats">Gestionnaire administratif achats</option>
+                <option value="Contrôleur de gestion">Contrôleur de gestion</option>
+                <option value="Chef de quart">Chef de quart</option>
+                <option value="Responsable Trésorerie">Responsable Trésorerie</option>
+                <option value="Gérant succursale">Gérant succursale</option>
+                <option value="Responsable de production">Responsable de production</option>
+                <option value="Concepteur designer">Concepteur designer</option>
+                <option value="Cuisinier">Cuisinier</option>
+                <option value="Assistant Saisie">Assistant Saisie</option>
+                <option value="Agent commercial interne">Agent commercial interne</option>
+                <option value="Directeur Commercial">Directeur Commercial</option>
+                <option value="Directeur général">Directeur général</option>
+                <option value="Stagiaire en marketing">Stagiaire en marketing</option>
+                <option value="Directeur marketing">Directeur marketing</option>
+                <option value="Directeur approvisionnement">Directeur approvisionnement</option>
+                <option value="Directeur ressources humaines">Directeur ressources humaines</option>
+                <option value="Gérant unité de production">Gérant unité de production</option>
+                <option value="Comptable">Comptable</option>
+                <option value="Femme de ménage">Femme de ménage</option>
+                <option value="Chargé de Recrutement et Formations">Chargé de Recrutement et Formations</option>
+                <option value="Assistant chef d'équipe">Assistant chef d'équipe</option>
+                <option value="Responsable maintenance">Responsable maintenance</option>
+                <option value="Responsable Recrutement et Formation">Responsable Recrutement et Formation</option>
+                <option value="Stagiaire en comptabilité">Stagiaire en comptabilité</option>
+                <option value="Aide maintenance">Aide maintenance</option>
+                <option value="Chef de cuisine">Chef de cuisine</option>
+                <option value="Responsable filiale">Responsable filiale</option>
+                <option value="Responsable facturation">Responsable facturation</option>
+                <option value="Agent maintenance">Agent maintenance</option>
+                <option value="Mécanicien">Mécanicien</option>
+                <option value="Administrateur réseaux">Administrateur réseaux</option>
+                <option value="Agent de surface">Agent de surface</option>
+                <option value="Gestionnaire des mobilisations">Gestionnaire des mobilisations</option>
+                <option value="Assistan commercial">Assistan commercial</option>
+                <option value="AGENT DE FACTURATION">AGENT DE FACTURATION</option>
+                <option value="Délégué marketing">Délégué marketing</option>
+                <option value="Attaché écoute client">Attaché écoute client</option>
+                <option value="Contrôleur qualité">Contrôleur qualité</option>
+                <option value="Technico-Commercial">Technico-Commercial</option>
+                <option value="Analyste financier">Analyste financier</option>
+                <option value="Attaché SIM">Attaché SIM</option>
+                <option value="Contrôleur des Commandes">Contrôleur des Commandes</option>
+                <option value="Administrateur systèmes">Administrateur systèmes</option>
+            </select>
         </div>
         <div>
             <label for="responsable_pr_id">Responsable PR ID:</label>
-            <input type="number" id="responsable_pr_id" name="responsable_pr_id" required>
+            <select id="responsable_pr_id" name="responsable_pr_id">
+                <option value="0">0</option>
+            </select>
+            
+            <div>
+                <label for="responsable">Responsable:</label>
+                <input type="radio" id="responsable" name="responsable" value="true">
+                <label for="not-responsable">Not Responsable:</label>
+                <input type="radio" id="not-responsable" name="responsable" value="false" checked>
+            </div>
+
         </div>
         <div>
-            <label for="listes">Listes:</label>
-            <input type="text" id="listes" name="listes" required>
+
         </div>
         <div>
             <label for="password">Password:</label>
@@ -126,6 +218,21 @@
 
     <script>
         const API_URL = 'http://127.0.0.1:8000';
+        
+        async function fetchResponsables() {
+        const response = await fetch(`${API_URL}/listeResponsables/`);
+        const responsables = await response.json();
+        const responsableSelect = document.getElementById('responsable_pr_id');
+
+        responsables.forEach(responsable => {
+            const option = document.createElement('option');
+            option.value = responsable.id;
+            option.text = `${responsable.name} - ${responsable.phone}`;
+            responsableSelect.appendChild(option);
+        });
+    }
+
+    fetchResponsables();
 
         async function fetchUsers() {
             const response = await fetch(`${API_URL}/users/`);
@@ -142,7 +249,7 @@
                     <p><strong>Departement:</strong> ${user.departement}</p>
                     <p><strong>Role:</strong> ${user.role}</p>
                     <p><strong>Responsable PR ID:</strong> ${user.responsable_pr_id}</p>
-                    <p><strong>Listes:</strong> ${user.listes}</p>
+                    <p><strong>Responsable:</strong> ${user.responsable}</p>
                     <button onclick="deleteUser(${user.id})">Delete</button>
                     <button onclick="toggleUpdateForm(${user.id})">Update</button>
                     <form id="update-user-form-${user.id}" onsubmit="updateUser(event, ${user.id})">
@@ -171,8 +278,10 @@
                             <input type="number" id="responsable_pr_id-${user.id}" name="responsable_pr_id" value="${user.responsable_pr_id}">
                         </div>
                         <div>
-                            <label for="listes-${user.id}">Listes:</label>
-                            <input type="text" id="listes-${user.id}" name="listes" value="${user.listes}">
+                            <label for="responsable-${user.id}">Responsable:</label>
+                            <input type="radio" id="responsable-${user.id}" name="responsable" value="true" ${user.responsable ? 'checked' : ''}>
+                            <label for="not-responsable-${user.id}">Not Responsable:</label>
+                            <input type="radio" id="not-responsable-${user.id}" name="responsable" value="false" ${user.responsable ? '' : 'checked'}>
                         </div>
                         <div>
                             <label for="password-${user.id}">Password:</label>
@@ -214,7 +323,7 @@
                 departement: formData.get('departement'),
                 role: formData.get('role'),
                 responsable_pr_id: formData.get('responsable_pr_id'),
-                listes: formData.get('listes'),
+                responsable: formData.get('responsable'),
                 password: formData.get('password')
             };
 
@@ -244,7 +353,7 @@
                 departement: formData.get('departement'),
                 role: formData.get('role'),
                 responsable_pr_id: formData.get('responsable_pr_id'),
-                listes: formData.get('listes'),
+                responsable: formData.get('responsable'),
                 password: formData.get('password')
             };
 

@@ -139,14 +139,14 @@
             <hr class="divider">
             <div class="forms">
                 <h2 class="main-title">Ordre de Mission</h2>
-                <form action="#" method="post">
+                <form action="" method="post" id="demandeForm">
                     <div class="case">
                         <label for="Numero">N°</label>
-                            <p>0001</p>
-                        </div>
+                        <p></p>
+                    </div>
                     <div class="case">
                         <label for="Nom">Chargé de mission</label>
-                        <input type="text" name="Nom" id="Nom" placeholder="Nom d'utilisateur">
+                        <input type="text" name="user_name" id="Nom" placeholder="Nom d'utilisateur">
                     </div>
                     <div class="case">
                         <label for="fonction">Fonction</label>
@@ -190,7 +190,7 @@
                     </div>
                     <div class="case">
                         <label for="heure">Heure de départ</label>
-                        <input type="time" name="heure" id="heure">
+                        <input type="time" name="heure_depart" id="heure">
                     </div>
                     <div class="case">
                         <label for="dater">Date de retour</label>
@@ -203,6 +203,68 @@
                     </div>
                     <div class="remarque">Si vous souhaitez envoyer et passer à demande de véhicule en même temps, cliquez sur « Demande Véhicule »</div>
                 </form>
+            
+                <script>
+                    function getCookie(name) {
+                        const value = `; ${document.cookie}`;
+                        const parts = value.split(`; ${name}=`);
+                        if (parts.length === 2) return parts.pop().split(';').shift();
+                    }
+            
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const userCookie = getCookie('user');
+                        if (userCookie) {
+                            const user = JSON.parse(decodeURIComponent(userCookie));
+                            document.getElementById('Nom').value = user.name;
+                            document.getElementById('fonction').value = user.role;
+                        } else {
+                            alert('No user data found.');
+                        }
+                    });
+            
+                    document.getElementById('demandeForm').addEventListener('submit', (event) => {
+                        event.preventDefault();
+                        
+                        const userCookie = getCookie('user');
+                        if (!userCookie) {
+                            alert('No user data found.');
+                            return;
+                        }
+            
+                        const user = JSON.parse(decodeURIComponent(userCookie));
+                        const data = {
+                            user_id: user.id,
+                            user_name: document.getElementById('Nom').value,
+                            date_debut: document.getElementById('dated').value,
+                            date_fin: document.getElementById('dater').value,
+                            heure_depart: document.getElementById('heure').value,
+                            fonction: document.getElementById('fonction').value,
+                            destination: document.getElementById('destination').value,
+                            motif: document.getElementById('objet').value,
+                            moyen_transport: document.getElementById('moyen').value,
+                            statut: 'pending',
+                            responsable_pr_id: user.responsable_pr_id,
+                            responsable_approbation : false,
+                            RH_accepted : false
+                        };
+            
+                        fetch('http://127.0.0.1:8000/demande_ordre_mission/', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(data)
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log('Success:', data);
+                            alert('Demande created successfully!');
+                        })
+                        .catch((error) => {
+                            console.error('Error:', error);
+                        });
+                    });
+                </script>
             </div>
         </div>
     </div>
